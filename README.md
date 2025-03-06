@@ -1,2 +1,2 @@
 # icare-lit-params
-Machine readable format of iCARE-Lit
+Machine readable format of iCARE-Lit model parameters.

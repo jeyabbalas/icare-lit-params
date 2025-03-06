@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 6px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+        .header-row th {
+            background-color: #e0e0e0;
+        }
+        .section-header {
+            background-color: #f9f9f9;
+            font-weight: bold;
+            text-align: left;
+        }
+        .subsection {
+            background-color: #f1f1f1;
+            text-align: left;
+            font-style: italic;
+        }
+        .left-align {
+            text-align: left;
+        }
+        .caption {
+            font-weight: bold;
+            margin-bottom: 10px;
+            font-size: 16px;
+            text-align: center;
+        }
+        .footnote {
+            font-size: 12px;
+            margin-top: 10px;
+        }
+        .indent {
+            padding-left: 20px !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="caption">Parameters of the iCARE-Lit breast cancer risk prediction model</div>
+    
+    <table>
+        <thead>
+            <tr class="header-row">
+                <th rowspan="2" class="left-align">Risk Factor</th>
+                <th colspan="2">US Population (%)</th>
+                <th colspan="2">UK Population (%)</th>
+                <th colspan="2">Relative Risk</th>
+            </tr>
+            <tr class="header-row">
+                <th>Ages &lt;50</th>
+                <th>Ages ≥50</th>
+                <th>Ages &lt;50</th>
+                <th>Ages ≥50</th>
+                <th>Ages &lt;50</th>
+                <th>Ages ≥50</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Age at menarche -->
+            <tr class="section-header">
+                <td colspan="7">Age at menarche (years)</td>
+            </tr>
+            <tr>
+                <td class="left-align">≤10</td>
+                <td>15.0</td>
+                <td>15.2</td>
+                <td>12.2</td>
+                <td>11.7</td>
+                <td>1.19</td>
+                <td>1.19</td>
+            </tr>
+            <tr>
+                <td class="left-align">11</td>
+                <td>18.5</td>
+                <td>18.1</td>
+                <td>21.6</td>
+                <td>21.5</td>
+                <td>1.09</td>
+                <td>1.09</td>
+            </tr>
+            <tr>
+                <td class="left-align">12</td>
+                <td>22.8</td>
+                <td>22.2</td>
+                <td>26.8</td>
+                <td>26.5</td>
+                <td>1.07</td>
+                <td>1.07</td>
+            </tr>
+            <tr>
+                <td class="left-align">13</td>
+                <td>21.4</td>
+                <td>21.6</td>
+                <td>21.5</td>
+                <td>21.3</td>
+                <td>Ref.</td>
+                <td>Ref.</td>
+            </tr>
+            <tr>
+                <td class="left-align">14</td>
+                <td>13.7</td>
+                <td>14.1</td>
+                <td>11.5</td>
+                <td>12.1</td>
+                <td>0.98</td>
+                <td>0.98</td>
+            </tr>
+            <tr>
+                <td class="left-align">15</td>
+                <td>6.1</td>
+                <td>6.1</td>
+                <td>4.4</td>
+                <td>4.8</td>
+                <td>0.92</td>
+                <td>0.92</td>
+            </tr>
+            <tr>
+                <td class="left-align">≥16</td>
+                <td>2.6</td>
+                <td>2.6</td>
+                <td>1.9</td>
+                <td>2.0</td>
+                <td>0.82</td>
+                <td>0.82</td>
+            </tr>
+            
+            <!-- Age at menopause -->
+            <tr class="section-header">
+                <td colspan="7">Age at menopause (years)</td>
+            </tr>
+            <tr>
+                <td class="left-align">&lt;40</td>
+                <td>-</td>
+                <td>21.3</td>
+                <td>-</td>
+                <td>2.2</td>
+                <td>-</td>
+                <td>0.67</td>
+            </tr>
+            <tr>
+                <td class="left-align">40-44</td>
+                <td>-</td>
+                <td>13.3</td>
+                <td>-</td>
+                <td>7.0</td>
+                <td>-</td>
+                <td>0.73</td>
+            </tr>
+            <tr>
+                <td class="left-align">45-49</td>
+                <td>-</td>
+                <td>22.7</td>
+                <td>-</td>
+                <td>23.4</td>
+                <td>-</td>
+                <td>0.86</td>
+            </tr>
+            <tr>
+                <td class="left-align">50-54</td>
+                <td>-</td>
+                <td>30.3</td>
+                <td>-</td>
+                <td>53.3</td>
+                <td>-</td>
+                <td>Ref.</td>
+            </tr>
+            <tr>
+                <td class="left-align">≥55</td>
+                <td>-</td>
+                <td>12.4</td>
+                <td>-</td>
+                <td>14.0</td>
+                <td>-</td>
+                <td>1.12</td>
+            </tr>
+            
+            <!-- Parity -->
+            <tr class="section-header">
+                <td colspan="7">Parity</td>
+            </tr>
+            <tr>
+                <td class="left-align">Nulliparous</td>
+                <td>20.4</td>
+                <td>17.6</td>
+                <td>28.0</td>
+                <td>13.0</td>
+                <td>Ref.</td>
+                <td>Ref.</td>
+            </tr>
+            <tr>
+                <td class="left-align">1 birth</td>
+                <td>18.5</td>
+                <td>15.1</td>
+                <td>16.0</td>
+                <td>13.8</td>
+                <td>0.87</td>
+                <td>0.87</td>
+            </tr>
+            <tr>
+                <td class="left-align">2 births</td>
+                <td>32.2</td>
+                <td>33.7</td>
+                <td>33.0</td>
+                <td>37.6</td>
+                <td>0.81</td>
+                <td>0.81</td>
+            </tr>
+            <tr>
+                <td class="left-align">3+ births</td>
+                <td>28.9</td>
+                <td>33.6</td>
+                <td>23.0</td>
+                <td>35.6</td>
+                <td>0.71</td>
+                <td>0.71</td>
+            </tr>
+            
+            <!-- Age at first birth -->
+            <tr class="section-header">
+                <td colspan="7">Age at first birth (years)</td>
+            </tr>
+            <tr>
+                <td class="left-align">&lt;20</td>
+                <td>23.1</td>
+                <td>26.8</td>
+                <td>16.7</td>
+                <td>15.9</td>
+                <td>Ref.</td>
+                <td>Ref.</td>
+            </tr>
+            <tr>
+                <td class="left-align">20-24</td>
+                <td>32.1</td>
+                <td>38.9</td>
+                <td>31.9</td>
+                <td>45.5</td>
+                <td>1.01</td>
+                <td>1.01</td>
+            </tr>
+            <tr>
+                <td class="left-align">25-29</td>
+                <td>25.3</td>
+                <td>21.7</td>
+                <td>32.0</td>
+                <td>27.3</td>
+                <td>1.11</td>
+                <td>1.11</td>
+            </tr>
+            <tr>
+                <td class="left-align">≥30</td>
+                <td>19.5</td>
+                <td>12.6</td>
+                <td>19.4</td>
+                <td>11.4</td>
+                <td>1.24</td>
+                <td>1.24</td>
+            </tr>
+            
+            <!-- OC use -->
+            <tr class="section-header">
+                <td colspan="7">Oral Contraceptive Use</td>
+            </tr>
+            <tr>
+                <td class="left-align">Never</td>
+                <td>14.3</td>
+                <td>19.1</td>
+                <td>18.5</td>
+                <td>40.9</td>
+                <td>Ref.</td>
+                <td>Ref.</td>
+            </tr>
+            <tr>
+                <td class="left-align">Ever</td>
+                <td>80.9</td>
+                <td>-</td>
+                <td>59.1</td>
+                <td>-</td>
+                <td>1.14</td>
+                <td>1.14</td>
+            </tr>
+            <tr>
+                <td class="left-align">Former</td>
+                <td>72.6</td>
+                <td>-</td>
+                <td>68.4</td>
+                <td>-</td>
+                <td>1.12</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td class="left-align">Current</td>
+                <td>13.1</td>
+                <td>-</td>
+                <td>13.1</td>
+                <td>-</td>
+                <td>1.33</td>
+                <td>-</td>
+            </tr>
+            
+            <!-- BMI -->
+            <tr class="section-header">
+                <td colspan="7">Body Mass Index (kg/m<sup>2</sup>)</td>
+            </tr>
+            <tr>
+                <td class="left-align">&lt;18.5</td>
+                <td>1.5</td>
+                <td>-</td>
+                <td>3.3</td>
+                <td>-</td>
+                <td>1.28</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td class="left-align">18.5 - &lt;25</td>
+                <td>41.0</td>
+                <td>-</td>
+                <td>35.7</td>
+                <td>-</td>
+                <td>Ref.</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td class="left-align">25 - &lt;30</td>
+                <td>29.9</td>
+                <td>-</td>
+                <td>35.8</td>
+                <td>-</td>
+                <td>0.92</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td class="left-align">≥30</td>
+                <td>27.6</td>
+                <td>-</td>
+                <td>25.2</td>
+                <td>-</td>
+                <td>0.74</td>
+                <td>-</td>
+            </tr>
+            
+            <!-- Height -->
+            <tr class="section-header">
+                <td colspan="7">Height (cm)†</td>
+            </tr>
+            <tr>
+                <td class="left-align">Mean (SD)</td>
+                <td>162.3 (6.4)</td>
+                <td>162.3 (6.4)</td>
+                <td>162.9 (6.5)</td>
+                <td>159.6 (6.5)</td>
+                <td>1.17</td>
+                <td>1.17</td>
+            </tr>
+            
+            <!-- Alcohol -->
+            <tr class="section-header">
+                <td colspan="7">Alcohol Consumption (g/day)</td>
+            </tr>
+            <tr>
+                <td class="left-align">None</td>
+                <td>41.8</td>
+                <td>45.0</td>
+                <td>10.6</td>
+                <td>12.7</td>
+                <td>Ref.</td>
+                <td>Ref.</td>
+            </tr>
+            <tr>
+                <td class="left-align">&lt;5</td>
+                <td>42.2</td>
+                <td>39.7</td>
+                <td>30.7</td>
+                <td>37.2</td>
+                <td>1.01</td>
+                <td>1.01</td>
+            </tr>
+            <tr>
+                <td class="left-align">5-14</td>
+                <td>12.4</td>
+                <td>12.1</td>
+                <td>27.6</td>
+                <td>23.8</td>
+                <td>1.03</td>
+                <td>1.03</td>
+            </tr>
+            <tr>
+                <td class="left-align">15-24</td>
+                <td>2.6</td>
+                <td>2.3</td>
+                <td>13.3</td>
+                <td>13.6</td>
+                <td>1.13</td>
+                <td>1.13</td>
+            </tr>
+            <tr>
+                <td class="left-align">25-34</td>
+                <td>0.6</td>
+                <td>0.6</td>
+                <td>8.0</td>
+                <td>5.3</td>
+                <td>1.21</td>
+                <td>1.21</td>
+            </tr>
+            <tr>
+                <td class="left-align">35-44</td>
+                <td>0.3</td>
+                <td>0.2</td>
+                <td>3.6</td>
+                <td>3.3</td>
+                <td>1.32</td>
+                <td>1.32</td>
+            </tr>
+            <tr>
+                <td class="left-align">≥45</td>
+                <td>0.2</td>
+                <td>0.2</td>
+                <td>6.1</td>
+                <td>4.1</td>
+                <td>1.46</td>
+                <td>1.46</td>
+            </tr>
+            
+            <!-- History of BBD -->
+            <tr class="section-header">
+                <td colspan="7">History of Benign Breast Disease</td>
+            </tr>
+            <tr>
+                <td class="left-align">No</td>
+                <td>83.3</td>
+                <td>83.2</td>
+                <td>83.1</td>
+                <td>83.5</td>
+                <td>Ref.</td>
+                <td>Ref.</td>
+            </tr>
+            <tr>
+                <td class="left-align">Yes</td>
+                <td>16.7</td>
+                <td>16.8</td>
+                <td>16.9</td>
+                <td>16.5</td>
+                <td>1.68</td>
+                <td>1.51</td>
+            </tr>
+            
+            <!-- Family history -->
+            <tr class="section-header">
+                <td colspan="7">Family History of Breast Cancer (First Degree Relatives)</td>
+            </tr>
+            <tr>
+                <td class="left-align">No</td>
+                <td>93.0</td>
+                <td>86.4</td>
+                <td>93.1</td>
+                <td>90.5</td>
+                <td>Ref.</td>
+                <td>Ref.</td>
+            </tr>
+            <tr>
+                <td class="left-align">Yes</td>
+                <td>7.0</td>
+                <td>13.6</td>
+                <td>6.9</td>
+                <td>9.5</td>
+                <td>2.5</td>
+                <td>1.6</td>
+            </tr>
+            
+            <!-- BMI and HRT interaction -->
+            <tr class="section-header">
+                <td colspan="7">Interaction between BMI and HRT use</td>
+            </tr>
+            <!-- Never Use of HRT -->
+            <tr class="subsection">
+                <td colspan="7">Never Use of HRT</td>
+            </tr>
+            <tr>
+                <td class="left-align indent">BMI &lt;25</td>
+                <td>-</td>
+                <td>20.4</td>
+                <td>-</td>
+                <td>18.1</td>
+                <td>-</td>
+                <td>Ref</td>
+            </tr>
+            <tr>
+                <td class="left-align indent">BMI 25-29</td>
+                <td>-</td>
+                <td>18.4</td>
+                <td>-</td>
+                <td>23.1</td>
+                <td>-</td>
+                <td>1.13</td>
+            </tr>
+            <tr>
+                <td class="left-align indent">BMI ≥30</td>
+                <td>-</td>
+                <td>19.5</td>
+                <td>-</td>
+                <td>19.4</td>
+                <td>-</td>
+                <td>1.25</td>
+            </tr>
+            
+            <!-- Former Use of HRT -->
+            <tr class="subsection">
+                <td colspan="7">Former Use of HRT</td>
+            </tr>
+            <tr>
+                <td class="left-align indent">BMI &lt;25</td>
+                <td>-</td>
+                <td>10.5</td>
+                <td>-</td>
+                <td>9.2</td>
+                <td>-</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td class="left-align indent">BMI 25-29</td>
+                <td>-</td>
+                <td>10.2</td>
+                <td>-</td>
+                <td>11.3</td>
+                <td>-</td>
+                <td>1.13</td>
+            </tr>
+            <tr>
+                <td class="left-align indent">BMI ≥30</td>
+                <td>-</td>
+                <td>11.1</td>
+                <td>-</td>
+                <td>10.1</td>
+                <td>-</td>
+                <td>1.25</td>
+            </tr>
+            
+            <!-- Current C-type HRT -->
+            <tr class="subsection">
+                <td colspan="7">Current Estrogen and Progestogen Combined HRT (C-type)</td>
+            </tr>
+            <tr>
+                <td class="left-align indent">BMI &lt;25</td>
+                <td>-</td>
+                <td>1.7</td>
+                <td>-</td>
+                <td>2.3</td>
+                <td>-</td>
+                <td>2.19</td>
+            </tr>
+            <tr>
+                <td class="left-align indent">BMI 25-29</td>
+                <td>-</td>
+                <td>1.4</td>
+                <td>-</td>
+                <td>3.1</td>
+                <td>-</td>
+                <td>2.18</td>
+            </tr>
+            <tr>
+                <td class="left-align indent">BMI ≥30</td>
+                <td>-</td>
+                <td>1.1</td>
+                <td>-</td>
+                <td>2.2</td>
+                <td>-</td>
+                <td>2.11</td>
+            </tr>
+            
+            <!-- Current E-type HRT -->
+            <tr class="subsection">
+                <td colspan="7">Current Estrogen-only HRT (E-type)</td>
+            </tr>
+            <tr>
+                <td class="left-align indent">BMI &lt;25</td>
+                <td>-</td>
+                <td>2.5</td>
+                <td>-</td>
+                <td>0.4</td>
+                <td>-</td>
+                <td>1.57</td>
+            </tr>
+            <tr>
+                <td class="left-align indent">BMI 25-29</td>
+                <td>-</td>
+                <td>1.9</td>
+                <td>-</td>
+                <td>0.4</td>
+                <td>-</td>
+                <td>1.49</td>
+            </tr>
+            <tr>
+                <td class="left-align indent">BMI ≥30</td>
+                <td>-</td>
+                <td>1.3</td>
+                <td>-</td>
+                <td>0.3</td>
+                <td>-</td>
+                <td>1.45</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="footnote">
+        <p>† Relative risk for height is reported per 10 cm</p>
+        <p>BBD = benign breast disease, BMI = body mass index, HRT = hormone replacement therapy, C-type = estrogen and progestogen combined, E-type = estrogen-only</p>
+        <p>Data sources: NHIS = National Health Interview Survey, NHANES = National Health and Nutrition Examination Survey, HSE = Health Survey for England</p>
+    </div>
+</body>
+</html>
